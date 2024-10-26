@@ -1,0 +1,153 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #DFF2EB;
+    color: #4A628A;
+}
+
+.container {
+    text-align: center;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin: 20px auto;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #7AB2D3;
+    color: #4A628A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+/* .cell:hover {
+    background-color: #e0e0e0;
+} */
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color:  #B9E5E8;
+
+    border: 1.5px solid #95b7aa ;
+    color: #4A628A ;
+    border-radius: 10px;
+}
+
+#status {
+    margin-top: 20px;
+    font-size: 2em;
+    
+    
+
+
+}
+input::placeholder{
+    color: #4A628A;
+}
+
+input{
+    color: #4A628A;
+    background-color:  #B9E5E8;
+    
+    font-size: 1.25em; /* Increase the font size of the placeholder text */
+    width: 200px; /* Increase the width of the input field */
+    height: 25px; /* Increase the height of the input field */
+    padding: 10px; /* Add some padding for better spacing */
+    border: 1px solid #ccc; /* Optional: Add a border */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    }
+
+
+
+.placeholder{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    
+}
+@keyframes pop {
+    0% {
+        transform: scale(1);
+    }
+    10% {
+        transform: scale(1.2);
+    }
+    20% {
+        transform: scale(1);
+    }
+    30% {
+        transform: scale(1.2);
+    }
+    40% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    
+}
+
+.cell.winner {
+    animation: pop 2s ease-in-out; /* Adjust duration as needed */
+
+}
+@keyframes boldText {
+    0% {
+        font-weight: bold;
+    }
+    10% {
+        font-weight: bolder;
+    }
+    20% {
+        font-weight: bolder;
+    }
+    30% {
+        font-weight: bold;
+    }
+    40% {
+        font-weight: bolder;
+    }
+    50% {
+        font-weight: bold;
+    }
+    60% {
+        font-weight: bolder;
+    }
+    70% {
+        font-weight: bold;
+    }
+    80% {
+        font-weight: bolder;
+    }
+    90% {
+        font-weight: bold;
+    }
+    100% {
+        font-weight: bolder;
+    }
+}
+
+.winner-text {
+    display: inline-block; /* Ensure it can be animated */
+    animation: boldText 2s ease-in-out; /* Add bold animation */
+}
+span{
+    font-weight: bolder;
+
+}
